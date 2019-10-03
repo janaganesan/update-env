@@ -1,0 +1,4 @@
+MYENV="$HOME/.myenv"
+
+$MYENV/aliases.sh
+source $MYENV/variables.sh

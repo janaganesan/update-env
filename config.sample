@@ -1,0 +1,10 @@
+{
+    "private-key-file": "id_intad",
+    
+    "files": {
+        "myenv/*": "/home/jganesan/.myenv/",
+        "bin/*": "/home/jganesan/bin/"
+    },
+
+    "hosts": "glb1vm154"
+}

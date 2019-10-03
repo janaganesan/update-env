@@ -1,0 +1,1 @@
+tail -f /var/log/debesys/OC_$1.log|sed --unbuffered -e 's/\(.*order_id.*\)/\o033[32m\1\o033[39m/' -e 's/\(.*ERROR.*\)/\o033[31m\1\o033[39m/' -e 's/\(.*TTUSApiHandler.*\)/\o033[34m\1\o033[39m/' -e 's/\(.*AOTC.*\)/\o033[34m\1\o033[39m/'
