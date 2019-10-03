@@ -9,6 +9,7 @@ This project uses your private key that can access the host without password. We
 ### Prerequisites
 
 Python 2.6 or higher
+
 paramiko module
 
 ### Configuring
@@ -39,5 +40,11 @@ By default Linux PATH variable points to your *$HOME/bin*. While your commands a
 update-env
 ```
 
-What it does is it sources your aliases and variables from *$HOME/.myenv*'s *aliases.sh* and *variables.sh*
+What it does is it sources your aliases and variables from the below files
+
+*$HOME/.myenv/aliases.sh*
+
+*$HOME/.myenv/variables.sh*
+
+
 
