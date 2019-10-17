@@ -7,7 +7,7 @@ import json
 def hostname_to_ip(hostname):
     ip = hostname
 
-    m = re.match("gl([a-d])(\d)vm(\d{1,3})$", hostname)
+    m = re.match("gl([a-d])(\d)[a-z]+(\d{1,3})$", hostname)
     if m is not None:
         p1, p2, p3 = m.group(1,2,3)
         p1 = ('a', 'b', 'c', 'd').index(p1) + 2
@@ -21,7 +21,8 @@ def copy_files():
     rsync = 'rsync -avrp -e "ssh -o StrictHostKeyChecking=no -i {}"'.format(private_key)
 
     for source, dest in config['files'].items():
-        os.system("{} {} {}:{}".format(rsync, source, ip_address ,dest))
+        cmd = "{} {} {}:{}".format(rsync, source, ip_address ,dest)
+        os.system(cmd)
 
 
 if __name__ == '__main__':
